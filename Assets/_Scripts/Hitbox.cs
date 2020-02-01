@@ -23,9 +23,11 @@ public class Hitbox : MonoBehaviour
     public Color collidingColor = new Color(1, 0, 0, .5f);
 
     private ColliderState currentState;
+	[ReadOnly] [SerializeField]
+	private Collider[] hits;
 
-    #region Shape Property Conditions
-    private bool RectangleSelected()
+	#region Shape Property Conditions
+	private bool RectangleSelected()
     {
         return shape == HitboxShape.Box;
     }
@@ -66,12 +68,12 @@ public class Hitbox : MonoBehaviour
             return null;
         }
 
-        Collider[] hits = null;
+        hits = null;
 
         switch (shape)
         {
             case HitboxShape.Box:
-                hits = Physics.OverlapBox(customPivot.position, boxSize, customPivot.rotation, whatToHit);
+                hits = Physics.OverlapBox(customPivot.position, new Vector3(boxSize.x * transform.lossyScale.x, boxSize.y * transform.lossyScale.y, boxSize.z * transform.lossyScale.z) / 2, customPivot.rotation, whatToHit);
                 break;
             case HitboxShape.Sphere:
                 hits = Physics.OverlapSphere(customPivot.position, sphereRadius, whatToHit);

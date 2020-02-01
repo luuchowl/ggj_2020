@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackInput : MonoBehaviour
+public class AttackInput : MonoBehaviour, IDamageable
 {
 	public Animator attackAnimator;
 	public float fireRate;
@@ -11,9 +11,9 @@ public class AttackInput : MonoBehaviour
 
 	private float reloadTime;
 
-	private void Start()
+	public void ApplyDamage(Hitbox hitbox, AttackData attackData)
 	{
-		
+		Debug.Log("Jogador tomou dano");
 	}
 
 	// Update is called once per frame
