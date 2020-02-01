@@ -10,6 +10,8 @@ public class OldInputSystem : MonoBehaviour
 
     private Vector3 directionalInput = Vector3.zero;
 
+    private Transform cameraDir;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class OldInputSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cameraDir = Camera.main.transform;
+
+
         directionalInput = Vector3.zero;
 
         if (Input.GetKey(KeyCode.S))
@@ -39,6 +44,10 @@ public class OldInputSystem : MonoBehaviour
             directionalInput += new Vector3(1, 0, 0);
         }
 
+        Vector3 targetDirection = directionalInput;
+        targetDirection = Camera.main.transform.TransformDirection(targetDirection);
+        targetDirection.y = 0.0f;
+
 
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -48,14 +57,14 @@ public class OldInputSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && directionalInput != Vector3.zero)
         {
-            movement.Dodge(directionalInput);
+            movement.Dodge(targetDirection);
         }
 
 
         if (directionalInput != Vector3.zero)
         {
             movement.isWalking = true;
-            movement.Walk(directionalInput.normalized);
+            movement.Walk(targetDirection.normalized);
         }
         else
         {
