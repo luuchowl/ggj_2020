@@ -109,11 +109,13 @@ public class CharacterMovement : MonoBehaviour
 
         movementDirection = Vector3.Lerp(movementDirection, targetMovementDirection, movementDirectionInterpolationFactor);
 
+        transform.forward = lookDirection;
     }
 
     public void Walk(Vector3 direction)
     {
         targetMovementDirection = direction;
+        Look(direction);
     }
 
 
@@ -130,6 +132,11 @@ public class CharacterMovement : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(DodgeRoutine(movementDirection));
         }
+    }
+
+    public void Look(Vector3 direction)
+    {
+        lookDirection = direction.normalized;
     }
 
     public IEnumerator DodgeRoutine(Vector3 direction)
