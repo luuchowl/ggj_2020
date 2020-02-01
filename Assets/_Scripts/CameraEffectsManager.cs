@@ -8,6 +8,7 @@ public class CameraEffectsManager : MonoBehaviour
     public float digitalGlitchEnd = 1;
     public float digitalGlitchVariance = 0.02f;
     public float digitalGlitchFrequency = 0.3f;
+    public float digitalGlitchDefault = -0.3f;
     private float currentDigitalGlitch;
    
 
@@ -17,6 +18,7 @@ public class CameraEffectsManager : MonoBehaviour
     private void Start()
     {
         digitalGlitch = GetComponent<Kino.DigitalGlitch>();
+        analogGlitch = GetComponent<Kino.AnalogGlitch>();
         StartCoroutine(GlitchOverTimeRoutine());
     }
 
@@ -26,9 +28,10 @@ public class CameraEffectsManager : MonoBehaviour
         currentDigitalGlitch = digitalGlitchBegin;
         while (!Timer.instance.complete)
         {
-            //currentDigitalGlitch = Timer.instance.GetNormalizedTime() * digitalGlitchEnd + Mathf.Sin(Time.time * digitalGlitchFrequency) * digitalGlitchVariance; 
-            currentDigitalGlitch = Mathf.Sin(Time.time * digitalGlitchFrequency) * digitalGlitchVariance;
+            currentDigitalGlitch = Timer.instance.GetNormalizedTime() * digitalGlitchEnd + Mathf.Sin(Time.time * digitalGlitchFrequency) * digitalGlitchVariance + digitalGlitchDefault; 
+            //currentDigitalGlitch = Mathf.Sin(Time.time * digitalGlitchFrequency) * digitalGlitchVariance;
             digitalGlitch.intensity = currentDigitalGlitch;
+            analogGlitch.colorDrift = Mathf.Clamp01(currentDigitalGlitch* 1);
 
 
             yield return new WaitForEndOfFrame();
