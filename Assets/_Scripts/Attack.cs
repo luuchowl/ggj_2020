@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using NaughtyAttributes;
+
+[System.Serializable]
+public class AttackHitEvent : UnityEvent<Hitbox, AttackData> {
+	
+}
 
 public class Attack : MonoBehaviour
 {
+	[Header("Preferences")]
 	public Hitbox[] hitboxes;
-	[ReadOnly] [SerializeField]
-	private Dictionary<Collider2D, Hitbox> hits = new Dictionary<Collider2D, Hitbox>();
+	public AttackHitEvent hitEvent = new AttackHitEvent();
+	[Header("Debug")]
+	private Dictionary<Collider, Hitbox> hits = new Dictionary<Collider, Hitbox>();
     [ReadOnly] [SerializeField]
-	private List<Collider2D> alreadyHit = new List<Collider2D>();
+	private List<Collider> alreadyHit = new List<Collider>();
 
 	private AttackData currentAttackData;
 
@@ -41,7 +49,7 @@ public class Attack : MonoBehaviour
 	{
 		for (int i = 0; i < hitboxes.Length; i++)
 		{
-			Collider2D[] collisions = hitboxes[i].UpdateHitBox();
+			Collider[] collisions = hitboxes[i].UpdateHitBox();
 
 			if(collisions == null)
 			{
@@ -64,16 +72,14 @@ public class Attack : MonoBehaviour
 				}
 			}
 		}
-	}
 
-	private void LateUpdate()
-	{
-		foreach (KeyValuePair<Collider2D, Hitbox> item in hits)
+		foreach (KeyValuePair<Collider, Hitbox> item in hits)
 		{
 			if (!alreadyHit.Contains(item.Key))
 			{
 				item.Key.GetComponent<IDamageable>().ApplyDamage(item.Value, currentAttackData);
 				alreadyHit.Add(item.Key);
+				hitEvent.Invoke(item.Value, currentAttackData);
 			}
 		}
 	}

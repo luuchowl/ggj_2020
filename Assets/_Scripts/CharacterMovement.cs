@@ -62,6 +62,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+		lookDirection = transform.forward;
     }
 
     void Update()

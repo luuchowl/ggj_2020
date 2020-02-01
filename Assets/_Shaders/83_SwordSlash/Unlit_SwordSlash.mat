@@ -34,5 +34,5 @@ Material:
     m_Floats:
     - _Clip: 0
     - _ClipNoise: 1
-    - _FallOffLeft: 0.2
+    - _FallOffLeft: -2.26
     m_Colors: []

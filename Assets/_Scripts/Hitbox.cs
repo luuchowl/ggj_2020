@@ -5,14 +5,14 @@ using NaughtyAttributes;
 
 public class Hitbox : MonoBehaviour
 {
-    public enum HitboxShape { Rectangle, Circle }
+    public enum HitboxShape { Box, Sphere }
     public enum ColliderState { Closed, Open, Colliding }
 
     [Header("Collision")]
     public LayerMask whatToHit;
     public HitboxShape shape;
-    [ShowIf("RectangleSelected")] public Vector2 boxSize = new Vector2(1, 1);
-    [ShowIf("CircleSelected")] public float circleRadius = .5f;
+    [ShowIf("RectangleSelected")] public Vector3 boxSize = new Vector3(1, 1, 1);
+    [ShowIf("CircleSelected")] public float sphereRadius = .5f;
     public Transform customPivot;
     [Header("Properties")]
     public bool isSweetSpot;
@@ -27,12 +27,12 @@ public class Hitbox : MonoBehaviour
     #region Shape Property Conditions
     private bool RectangleSelected()
     {
-        return shape == HitboxShape.Rectangle;
+        return shape == HitboxShape.Box;
     }
 
     private bool CircleSelected()
     {
-        return shape == HitboxShape.Circle;
+        return shape == HitboxShape.Sphere;
     }
     #endregion
 
@@ -59,22 +59,22 @@ public class Hitbox : MonoBehaviour
         UpdateHitBox();
     }
 
-    public Collider2D[] UpdateHitBox()
+    public Collider[] UpdateHitBox()
     {
         if(currentState == ColliderState.Closed || !gameObject.activeInHierarchy)
         {
             return null;
         }
 
-        Collider2D[] hits = null;
+        Collider[] hits = null;
 
         switch (shape)
         {
-            case HitboxShape.Rectangle:
-                hits = Physics2D.OverlapBoxAll(customPivot.position, boxSize, customPivot.rotation.eulerAngles.z, whatToHit);
+            case HitboxShape.Box:
+                hits = Physics.OverlapBox(customPivot.position, boxSize, customPivot.rotation, whatToHit);
                 break;
-            case HitboxShape.Circle:
-                hits = Physics2D.OverlapCircleAll(customPivot.position, circleRadius, whatToHit);
+            case HitboxShape.Sphere:
+                hits = Physics.OverlapSphere(customPivot.position, sphereRadius, whatToHit);
                 break;
             default:
                 break;
@@ -110,11 +110,11 @@ public class Hitbox : MonoBehaviour
         //Shape
         switch (shape)
         {
-            case HitboxShape.Rectangle:
+            case HitboxShape.Box:
                 Gizmos.DrawCube(Vector3.zero, boxSize);
                 break;
-            case HitboxShape.Circle:
-                Gizmos.DrawSphere(Vector3.zero, circleRadius);
+            case HitboxShape.Sphere:
+                Gizmos.DrawSphere(Vector3.zero, sphereRadius);
                 break;
             default:
                 break;
