@@ -10019,10 +10019,11 @@ MonoBehaviour:
   playerInput: {fileID: 2341743389027564889}
   controller: {fileID: 2341743389027564891}
   movement: {fileID: 2341743389027564836}
-  attackAnimator: {fileID: 3931546987326024388}
   fireRate: 10
   gunBarrel: {fileID: 2341743390281965956}
   bulletPool: {fileID: 6200025454162463576}
+  attackAnimator: {fileID: 3931546987326024388}
+  characterAnimator: {fileID: 1116305244}
 --- !u!114 &5395334093478822756
 MonoBehaviour:
   m_ObjectHideFlags: 0
