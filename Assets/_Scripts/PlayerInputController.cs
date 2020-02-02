@@ -42,6 +42,15 @@ public class PlayerInputController : MonoBehaviour
 			movement.isWalking = false;
 		}
 
+		if (lookDir.sqrMagnitude == 0)
+		{
+			movement.Look(moveDir.normalized);
+		}
+		else
+		{
+			movement.Look(lookDir.normalized);
+		}
+
 		if (shooting && reloadTime > 1 / fireRate) {
 			reloadTime = 0;
 			Transform bullet = bulletPool.GetPooledObject<Transform>();
@@ -76,11 +85,11 @@ public class PlayerInputController : MonoBehaviour
 		else
 		{
 			lookDir = value.Get<Vector2>();
+			lookDir.z = lookDir.y;
+			lookDir = cam.transform.TransformDirection(lookDir);
 		}
 
 		lookDir.y = 0;
-
-		movement.Look(lookDir.normalized);
 	}
 
 	public void OnFire(InputValue value)

@@ -12289,16 +12289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2341743389027564889, guid: a2fdc9d6349959843a9b6e69381f67d3,
-        type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341743389027564894, guid: a2fdc9d6349959843a9b6e69381f67d3,
-        type: 3}
-      propertyPath: bulletPool
-      value: 
-      objectReference: {fileID: 1673536778}
     - target: {fileID: 2341743389027564895, guid: a2fdc9d6349959843a9b6e69381f67d3,
         type: 3}
       propertyPath: m_LocalPosition.x
