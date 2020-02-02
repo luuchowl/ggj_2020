@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Dash 2
   guid: 9a981f82a590bc468de629fe02b03e51
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Dying
   guid: 72fb909fdb572e49b1e79d598fbbc038
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: event:/Attack
   guid: 3f028358e56bbc4b8425a27493d6d536
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
   lastModified: 637162490328682268
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4602321719375384716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3473724083571875318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: 2a2458cacfa2b64ba3a240bde0974879
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD2/Master.strings.bank
   SubDir: 
-  lastModified: 637162490328817007
+  lastModified: 637162516721846621
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -162,15 +162,32 @@ MonoBehaviour:
   Path: event:/GameplayMusic
   guid: cbd848b06b9b7242a4274ca545caf7b4
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4602321719375384716}
+  - {fileID: -1310005648560421401}
   MinDistance: 0
   MaxDistance: 0
   Length: 55928
+--- !u!114 &-1310005648560421401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameplayMusic/Mood
+  m_EditorClassIdentifier: 
+  Name: Mood
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
 --- !u!114 &-1158106372195978227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +203,7 @@ MonoBehaviour:
   Path: event:/Shoot 1
   guid: 7435d3ae2c1b3149810ff2b094aca5be
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -208,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -2364046036509733055}
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   EditorEvents:
   - {fileID: -3473724083571875318}
   - {fileID: -6455754902941124198}
@@ -223,10 +240,10 @@ MonoBehaviour:
   - {fileID: 2579333082773353206}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   StringsBanks:
   - {fileID: -2364046036509733055}
-  stringsBankWriteTime: 637162490328817007
+  stringsBankWriteTime: 637162516721846621
   cacheVersion: 3
 --- !u!114 &949857815673844203
 MonoBehaviour:
@@ -243,7 +260,7 @@ MonoBehaviour:
   Path: event:/Damage
   guid: ef3bc542ec1df94fbcb34d30559101cc
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -266,7 +283,7 @@ MonoBehaviour:
   Path: event:/Shoot 2
   guid: f4b0a12dc2b15d4b902e354b0dcab394
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -312,6 +329,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3421856799201624743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD2/Master.bank
+  SubDir: 
+  lastModified: 637162516721826829
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4148763835124954503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +362,7 @@ MonoBehaviour:
   Path: event:/Shoot 3
   guid: 9787210b71a1a34ea72a995a6b583eee
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -367,7 +402,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 8194704b4289ae4c94f3cd5926e6a1cf
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -390,7 +425,7 @@ MonoBehaviour:
   Path: event:/Dash 1
   guid: 4ab0d8a98d11cb46a2710c777f0aa356
   Banks:
-  - {fileID: -5126358026960354260}
+  - {fileID: 3421856799201624743}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

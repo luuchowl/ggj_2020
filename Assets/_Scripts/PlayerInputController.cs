@@ -14,7 +14,6 @@ public class PlayerInputController : MonoBehaviour
 	[Header("Attack")]
 	public float fireRate;
 	public Transform gunBarrel;
-	public ObjectPool bulletPool;
     [Header("Animations")]
     public Animator attackAnimator;
     public Animator characterAnimator;
@@ -56,7 +55,7 @@ public class PlayerInputController : MonoBehaviour
 
 		if (shooting && reloadTime > 1 / fireRate) {
 			reloadTime = 0;
-			Transform bullet = bulletPool.GetPooledObject<Transform>();
+			Transform bullet = Game_Manager.instance.playerBulletPool.GetPooledObject<Transform>();
 			bullet.position = gunBarrel.position;
 			bullet.rotation = gunBarrel.rotation;
             SoundManager.instance.PlayShoot1();
