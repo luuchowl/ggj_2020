@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 08bce0541612c234690e231979114212
+guid: 1023bbb3ca3d93a4e9362712315734b0
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
@@ -27,6 +27,9 @@ ModelImporter:
   - first:
       74: 8975857120589549748
     second: Esqueleto.001|Esqueleto|Esqueleto|Armature.002|Armature|ArmatureAction.002|Ar
+  - first:
+      74: 3516009698727909201
+    second: Esqueleto.001|Esqueleto|Esqueleto|ArmatureAction.001|Esqueleto|ArmatureAc.001
   - first:
       74: -7020461650874868158
     second: Esqueleto.001|Esqueleto|Esqueleto|ArmatureAction.001|Esqueleto|ArmatureAction

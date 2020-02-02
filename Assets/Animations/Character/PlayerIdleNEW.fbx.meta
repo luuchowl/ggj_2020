@@ -4,32 +4,41 @@ ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: 8450808836658823645
-    second: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
+      74: -3870912974241298830
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|.000
   - first:
-      74: 379642582087256477
-    second: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction.002
+      74: -249969814774654080
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|.001
   - first:
-      74: -8555113714952723889
-    second: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction.003
+      74: -251879465550091930
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|Arma
   - first:
-      74: 4386694182768337470
-    second: Armature.001|Armature|Armature|ArmatureAction|Armature|ArmatureAction
+      74: -3307064863024743226
+    second: Esqueleto.001|Armature|Armature|ArmatureAction|Armature|ArmatureAction
   - first:
-      74: 4447632540752049031
-    second: Armature.001|Armature|Armature|ArmatureAction|Armature|ArmatureAction.002
+      74: 3701982009570857126
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature.000
   - first:
-      74: 2469121337899214692
-    second: Armature.001|Armature|Armature|ArmatureAction|Armature|ArmatureAction.003
+      74: -3871828004568010395
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature.001
   - first:
-      74: 4746348146116259088
-    second: Esqueleto|Armature|Armature|ArmatureAction|Armature|ArmatureAction
+      74: 8376522919981242607
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
   - first:
-      74: 2637843294230335350
-    second: Esqueleto|Armature|Armature|ArmatureAction|Armature|ArmatureAction.002
+      74: 4072097765217502213
+    second: Esqueleto.001|Esqueleto.001|Esqueleto.001|Armature|Armature|ArmatureAction|Ar
   - first:
-      74: -491294543181428167
-    second: Esqueleto|Armature|Armature|ArmatureAction|Armature|ArmatureAction.003
+      74: 8975857120589549748
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature.002|Armature|ArmatureAction.002|Ar
+  - first:
+      74: -4297028021067017683
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.000
+  - first:
+      74: 8822124239922067042
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.001
+  - first:
+      74: 543304869242896151
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armature|A
   externalObjects: {}
   materials:
     materialImportMode: 1
