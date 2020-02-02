@@ -10036,9 +10036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb20177432b43d469fa403f0f66c663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibilityDuration: 1
   maxHealth: 10
   maxAttackStamina: 10
   maxGunStamina: 10
+  playerAnim: {fileID: 1116305244}
   valuesChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19913,6 +19915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e89a4dabf8040b94c98ffdc9aecbb4f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89a4dabf8040b94c98ffdc9aecbb4f0, type: 3}
