@@ -23,7 +23,6 @@ public class BossBController : MonoBehaviour
 	private void OnEnable()
 	{
 		player = GameObject.FindGameObjectWithTag("Player").transform;
-		StartBattle();
 	}
 
 	public void StartBattle()

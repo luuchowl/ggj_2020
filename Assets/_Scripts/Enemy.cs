@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using NaughtyAttributes;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
@@ -11,7 +12,7 @@ public class Enemy : MonoBehaviour, IDamageable
 	public UnityEvent damageEvent = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
 
-	private int currentHealth;
+	[ReadOnly] public int currentHealth;
 
 	private void OnEnable()
 	{

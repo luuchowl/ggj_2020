@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 084a93a8a857bf14ab6a748a82007d11
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -3870912974241298830
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|.000
+  - first:
+      74: -249969814774654080
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|.001
+  - first:
+      74: -251879465550091930
+    second: Esqueleto.001|Armature.001|Armature.001|Armature|Armature|ArmatureAction|Arma
+  - first:
+      74: -3307064863024743226
+    second: Esqueleto.001|Armature|Armature|ArmatureAction|Armature|ArmatureAction
+  - first:
+      74: 3701982009570857126
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature.000
+  - first:
+      74: -3871828004568010395
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature.001
+  - first:
+      74: 8376522919981242607
+    second: Esqueleto.001|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+  - first:
+      74: 8975857120589549748
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature.002|Armature|ArmatureAction.002|Ar
+  - first:
+      74: 8426195483776650922
+    second: Esqueleto.001|Esqueleto|Esqueleto|ArmatureAction.001|Esqueleto|ArmatureAc.000
+  - first:
+      74: -7020461650874868158
+    second: Esqueleto.001|Esqueleto|Esqueleto|ArmatureAction.001|Esqueleto|ArmatureAction
+  - first:
+      74: -4297028021067017683
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.000
+  - first:
+      74: 8822124239922067042
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.001
+  - first:
+      74: -3743983262224355210
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.002
+  - first:
+      74: 543304869242896151
+    second: Esqueleto.001|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armature|A
+  - first:
+      74: 8571738443884485484
+    second: Esqueleto.001|Esqueleto|Esqueleto|Esqueleto|Esqueleto|Armature.002|Armatu.001
+  - first:
+      74: -1360252692846854654
+    second: Esqueleto.001|Esqueleto|Esqueleto|Esqueleto|Esqueleto|ArmatureAction.001|Esqu
+  - first:
+      74: -1655735646996071086
+    second: Esqueleto.001|Esqueleto|Esqueleto|Esqueleto|Esqueleto|Armature|Armature|A.005
+  - first:
+      74: -4701266983603372050
+    second: Esqueleto.001|Esqueleto|Esqueleto|Esqueleto|Esqueleto|Armature|Armature|A.006
+  - first:
+      74: 5449945513633469921
+    second: Esqueleto.001|Esqueleto|Esqueleto|Esqueleto|Esqueleto|Armature|Armature|A.007
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

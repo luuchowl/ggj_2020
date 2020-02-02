@@ -34,9 +34,11 @@ public class CharacterMovement : MonoBehaviour
 
     //Dodge & Dash // Coroutine
     public AnimationCurve dodgeVelocityOverTime = AnimationCurve.Constant(0, 1, 1);
+    public AnimationCurve dodgeVelocityOverTimeRandom = AnimationCurve.Constant(0, 1, 1);
     public float dodgeDuration = 0.6f;
     public float dodgeSpeed = 20;
-
+    public float dodgeRandomStart = 0;
+    public float dodgeRandomEnd = 40;
 
     //Custom look direction
     //Moving platforms
@@ -143,14 +145,31 @@ public class CharacterMovement : MonoBehaviour
         isOnDodge = true;
 
         float timer = 0;
+        float randomDistance = dodgeSpeed + Random.Range(-Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()), Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime())) ;
 
-        print("Dei dodge");
-        while (timer < dodgeDuration)
+        print(Timer.instance.GetNormalizedTime());
+        if (Timer.instance.GetNormalizedTime() < 0.85f || Random.Range(0, 4) == 0)
         {
-            timer += Time.deltaTime;
-            controller.Move(direction * Time.deltaTime * dodgeVelocityOverTime.Evaluate(timer / dodgeDuration) * dodgeSpeed);
-            yield return new WaitForEndOfFrame();
+            print(Timer.instance.GetNormalizedTime());
+            while (timer < dodgeDuration)
+            {
+                timer += Time.deltaTime;
+                controller.Move(direction * Time.deltaTime * dodgeVelocityOverTime.Evaluate(timer / dodgeDuration) * randomDistance);
+                yield return new WaitForEndOfFrame();
+            }
         }
+        else
+        {
+            while (timer < dodgeDuration)
+            {
+                timer += Time.deltaTime;
+                controller.Move(direction * Time.deltaTime * dodgeVelocityOverTimeRandom.Evaluate(timer / dodgeDuration) * randomDistance);
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+        
+
         currentWalkVelocity = 0;
         isOnDodge = false;
         //yield return null;
