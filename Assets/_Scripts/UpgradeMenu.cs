@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeMenu : MonoBehaviour
 {
-    PlayerStatus status;
+    public PlayerStatus status;
+    public Button buttonDash;
+    public Button buttonSword;
+    public Button sword;
 
     public void Start()
     {
