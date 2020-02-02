@@ -1565,6 +1565,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7474461904220485439, guid: ad0714785ac1a9346afba9b4a0a73239,
+        type: 3}
+      propertyPath: teleportDelay.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474461904220485439, guid: ad0714785ac1a9346afba9b4a0a73239,
+        type: 3}
+      propertyPath: teleportDelay.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7474461905388958666, guid: ad0714785ac1a9346afba9b4a0a73239,
         type: 3}
       propertyPath: m_Name
@@ -4370,7 +4380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590758529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -2.79}
+  m_LocalPosition: {x: -5.99, y: 2, z: -22.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1051475683}
@@ -12990,7 +13000,7 @@ PrefabInstance:
     - target: {fileID: 5395334093478822756, guid: a2fdc9d6349959843a9b6e69381f67d3,
         type: 3}
       propertyPath: maxHealth
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fdc9d6349959843a9b6e69381f67d3, type: 3}
