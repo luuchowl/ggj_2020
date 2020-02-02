@@ -33404,7 +33404,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 580282202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 626257863}
+        m_MethodName: UpgradeShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &580282202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35241,6 +35252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1998f742713e8ab4ea2578c17be01d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status: {fileID: 0}
 --- !u!1 &626298440
 GameObject:
   m_ObjectHideFlags: 0
@@ -37310,7 +37322,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 725617407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 626257863}
+        m_MethodName: UpgradeSword
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &725617407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47145,7 +47168,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997580753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 626257863}
+        m_MethodName: UpgradeDash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &997580753
 MonoBehaviour:
   m_ObjectHideFlags: 0
