@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using NaughtyAttributes;
 
 public class PlayerStatus : MonoBehaviour, IDamageable
 {
@@ -10,12 +11,12 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 	public int maxAttackStamina = 10;
 	public int maxGunStamina = 10;
 
-	public UnityEvent damageEvent = new UnityEvent();
+	public UnityEvent valuesChanged = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
 
-	private int currentHealth;
-	private int currentAttackStamina;
-	private int currentGunStamina;
+	[ReadOnly] public int currentHealth;
+	[ReadOnly] public int currentAttackStamina;
+	[ReadOnly] public int currentGunStamina;
 
 	private void OnEnable()
 	{
@@ -24,14 +25,15 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 
 	public void ApplyDamage(Hitbox hitbox, AttackData attackData)
 	{
+		currentHealth -= attackData.damage;
+
 		if(currentHealth <= 0)
 		{
 			deathEvent.Invoke();
 		}
 		else
 		{
-			currentHealth -= attackData.damage;
-			damageEvent.Invoke();
+			valuesChanged.Invoke();
 		}
 	}
 
@@ -40,10 +42,13 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 		currentHealth = maxHealth;
 		currentAttackStamina = maxAttackStamina;
 		currentGunStamina = maxGunStamina;
+
+		valuesChanged.Invoke();
 	}
 
 	public void OnAttack(InputValue value)
 	{
 		currentAttackStamina += 1;
+		valuesChanged.Invoke();
 	}
 }
