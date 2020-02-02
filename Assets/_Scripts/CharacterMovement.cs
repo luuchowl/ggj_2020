@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class CharacterMovement : MonoBehaviour
 {
+	public Transform model;
 
     //Walk
     public float walkSpeed = 10f;
@@ -110,13 +111,12 @@ public class CharacterMovement : MonoBehaviour
 
         movementDirection = Vector3.Lerp(movementDirection, targetMovementDirection, movementDirectionInterpolationFactor);
 
-        transform.forward = lookDirection;
+        model.forward = lookDirection;
     }
 
     public void Walk(Vector3 direction)
     {
         targetMovementDirection = direction;
-        Look(direction);
     }
 
 
