@@ -56,7 +56,7 @@
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            float4 frag (v2f i) : SV_Target
             {
                 // sample the texture
 				i.uv += fixed2(_Clip, 0);
