@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitBox: {fileID: 1591054587535594479}
   attackData: {fileID: 11400000, guid: f77a7ba1cdd1e9447a9040d4f591e7bf, type: 2}
+  trail: {fileID: 7363000678376932207}
   destroyFX: {fileID: 0}
 --- !u!114 &1591054587535594479
 MonoBehaviour:
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatToHit:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   shape: 1
   boxSize: {x: 1, y: 1, z: 1}
   sphereRadius: 0.5

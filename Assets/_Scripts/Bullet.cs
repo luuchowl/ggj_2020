@@ -6,11 +6,17 @@ public class Bullet : MonoBehaviour
 {
 	public Hitbox hitBox;
 	public AttackData attackData;
+	public TrailRenderer trail;
 	public GameObject destroyFX;
 
 	private void OnEnable()
 	{
 		hitBox.OpenCollision();
+	}
+
+	private void OnDisable()
+	{
+		trail.Clear();
 	}
 
 	private void Update()
