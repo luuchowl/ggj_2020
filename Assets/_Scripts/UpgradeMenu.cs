@@ -4,8 +4,24 @@ using UnityEngine;
 
 public class UpgradeMenu : MonoBehaviour
 {
-    public void UpgradeShoot;
-    public void UpgradeDash;
-    public void UpgradeSword;
+    PlayerStatus status;
+
+    public void Start()
+    {
+        status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+    }
+
+    public void UpgradeShoot()
+    {
+        status.upgradeShoot = true;
+    }
+    public void UpgradeDash()
+    {
+        status.upgradeDodge = true;
+    }
+    public void UpgradeSword()
+    {
+        status.upgradeSword = true;
+    }
 
 }

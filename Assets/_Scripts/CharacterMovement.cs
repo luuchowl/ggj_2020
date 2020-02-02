@@ -45,6 +45,7 @@ public class CharacterMovement : MonoBehaviour
     //SoftGround
 
     private CharacterController controller;
+    private PlayerStatus status;
 
     public Vector3 lookDirection;
     public Vector3 movementDirection;
@@ -65,7 +66,8 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-		lookDirection = transform.forward;
+        status = GetComponent<PlayerStatus>();
+        lookDirection = transform.forward;
     }
 
     void Update()
@@ -145,10 +147,17 @@ public class CharacterMovement : MonoBehaviour
         isOnDodge = true;
 
         float timer = 0;
-        float randomDistance = dodgeSpeed + Random.Range(-Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()), Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime())) ;
 
-        print(Timer.instance.GetNormalizedTime());
-        if (Timer.instance.GetNormalizedTime() < 0.85f || Random.Range(0, 4) == 0)
+
+        float randomDistance = 0;
+
+        if (!status.upgradeDodge) { 
+        randomDistance = dodgeSpeed + Random.Range(-Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()), Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()));
+        }
+    
+
+    print(Timer.instance.GetNormalizedTime());
+        if (Timer.instance.GetNormalizedTime() < 0.85f || Random.Range(0, 4) == 0 || status.upgradeDodge)
         {
             print(Timer.instance.GetNormalizedTime());
             while (timer < dodgeDuration)
@@ -157,6 +166,8 @@ public class CharacterMovement : MonoBehaviour
                 controller.Move(direction * Time.deltaTime * dodgeVelocityOverTime.Evaluate(timer / dodgeDuration) * randomDistance);
                 yield return new WaitForEndOfFrame();
             }
+
+
         }
         else
         {
