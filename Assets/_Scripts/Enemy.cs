@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
 	public int maxHealth;
 	public Hitbox contactHitbox;
 	public AttackData contactDamageData;
+	public UnityEvent damageEvent = new UnityEvent();
+	public UnityEvent deathEvent = new UnityEvent();
 
 	private int currentHealth;
 
-	private void Awake()
-	{
-		currentHealth = maxHealth;
-	}
-
 	private void OnEnable()
 	{
+		currentHealth = maxHealth;
 		contactHitbox.OpenCollision();
 	}
 
@@ -39,6 +38,14 @@ public class Enemy : MonoBehaviour, IDamageable
 
 	public void ApplyDamage(Hitbox hitbox, AttackData attackData)
 	{
-		Debug.Log("Morri");
+		if(currentHealth <= 0)
+		{
+			deathEvent.Invoke();
+		}
+		else
+		{
+			currentHealth -= attackData.damage;
+			damageEvent.Invoke();
+		}
 	}
 }
