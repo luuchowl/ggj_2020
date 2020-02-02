@@ -6,7 +6,6 @@ public class MultiplyingBullet : MonoBehaviour
 {
 	public Hitbox hitBox;
 	public AttackData attackData;
-	public GameObject destroyFX;
 	public ObjectPool bulletPool;
 	public float angleVariation;
 	public int maxCloneLevel = 2;
@@ -56,6 +55,8 @@ public class MultiplyingBullet : MonoBehaviour
 			}
 
 			hitBox.CloseCollision();
+			Transform fx = Game_Manager.instance.bulletDeathPool.GetPooledObject().transform;
+			fx.position = transform.position;
 			gameObject.SetActive(false);
 		}
 	}

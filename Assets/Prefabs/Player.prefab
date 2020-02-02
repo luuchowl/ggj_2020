@@ -10021,7 +10021,6 @@ MonoBehaviour:
   movement: {fileID: 2341743389027564836}
   fireRate: 10
   gunBarrel: {fileID: 2341743390281965956}
-  bulletPool: {fileID: 6200025454162463576}
   attackAnimator: {fileID: 3931546987326024388}
   characterAnimator: {fileID: 1116305244}
 --- !u!114 &5395334093478822756
@@ -10041,6 +10040,9 @@ MonoBehaviour:
   maxAttackStamina: 10
   maxGunStamina: 10
   playerAnim: {fileID: 1116305244}
+  upgradeSword: 0
+  upgradeShoot: 0
+  upgradeDodge: 0
   valuesChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19712,6 +19714,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   alreadyHit: []
+--- !u!114 &8993006596933907739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931546987326024394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12912285b987384409c325d68f5a880e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackControler: {fileID: 2341743390434830096}
+  _hitbox: {fileID: 2341743389676808833}
 --- !u!1 &3998602246100910903
 GameObject:
   m_ObjectHideFlags: 0
@@ -20084,18 +20100,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c162a1bf7560ce448855adb9558c8de6, type: 3}
---- !u!1 &3931546987326024394 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1652858529364897301, guid: c162a1bf7560ce448855adb9558c8de6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2341743390461773023}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6383112889017399040 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8713010000841061343, guid: c162a1bf7560ce448855adb9558c8de6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2341743390461773023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3931546987326024388 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1652858529364897307, guid: c162a1bf7560ce448855adb9558c8de6,
@@ -20105,6 +20109,18 @@ Animator:
 --- !u!4 &3931546987326024389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1652858529364897306, guid: c162a1bf7560ce448855adb9558c8de6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2341743390461773023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3931546987326024394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1652858529364897301, guid: c162a1bf7560ce448855adb9558c8de6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2341743390461773023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6383112889017399040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8713010000841061343, guid: c162a1bf7560ce448855adb9558c8de6,
     type: 3}
   m_PrefabInstance: {fileID: 2341743390461773023}
   m_PrefabAsset: {fileID: 0}
