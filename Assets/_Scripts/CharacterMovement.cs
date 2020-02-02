@@ -70,7 +70,6 @@ public class CharacterMovement : MonoBehaviour
     {
         RaycastHit hitInfo;
 
-
         if (Physics.Raycast(transform.position, gravityDirection, out hitInfo, 1.1f, groundLayer))
             //(transform.position + gravityDirection * controller.height / 2, 0.1f, gravityDirection, out hitInfo, groundLayer))
         {
@@ -111,14 +110,13 @@ public class CharacterMovement : MonoBehaviour
 
         movementDirection = Vector3.Lerp(movementDirection, targetMovementDirection, movementDirectionInterpolationFactor);
 
-        model.forward = lookDirection;
+        model.forward = lookDirection == Vector3.zero? model.forward : lookDirection;
     }
 
     public void Walk(Vector3 direction)
     {
         targetMovementDirection = direction;
     }
-
 
     public void Jump()
     {

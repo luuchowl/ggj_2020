@@ -90,7 +90,7 @@ public class PlayerInputController : MonoBehaviour
 
 	public void OnFire(InputValue value)
 	{
-		shooting = value.Get<float>() == 1;
+		shooting = value.Get<float>() > 0.5f;
 	}
 
 	public void OnAttack(InputValue value)
