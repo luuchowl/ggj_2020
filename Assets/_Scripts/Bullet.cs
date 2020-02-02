@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
 	public Hitbox hitBox;
 	public AttackData attackData;
 	public TrailRenderer trail;
-	public GameObject destroyFX;
 
 	private void OnEnable()
 	{
@@ -38,6 +37,8 @@ public class Bullet : MonoBehaviour
 			}
 
 			hitBox.CloseCollision();
+			Transform fx = Game_Manager.instance.bulletDeathPool.GetPooledObject().transform;
+			fx.position = transform.position;
 			gameObject.SetActive(false);
 		}
 	}

@@ -4899,7 +4899,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   teleportDelay: {x: 3, y: 7}
-  bulletPool: {fileID: 7474461905623038246}
+  bossAnim: {fileID: 35086283}
 --- !u!95 &35086283
 Animator:
   serializedVersion: 3

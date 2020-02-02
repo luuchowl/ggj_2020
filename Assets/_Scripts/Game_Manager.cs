@@ -10,6 +10,12 @@ public class Game_Manager : Singleton<Game_Manager>
 	[HideInInspector] public PlayerInputController playerInput;
 	[HideInInspector] public PlayerStatus playerStatus;
 
+	public ObjectPool playerBulletPool;
+	public ObjectPool enemyBulletPool;
+	public ObjectPool swordHitPool;
+	public ObjectPool bulletDeathPool;
+	public ObjectPool explosionPool;
+
 	public UnityEvent gameStartEvent = new UnityEvent();
 	public UnityEvent gameOverEvent = new UnityEvent();
 
