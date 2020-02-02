@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2341743389027564889}
   - component: {fileID: 2341743389027564836}
   - component: {fileID: 684392176719530615}
+  - component: {fileID: 5395334093478822756}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -200,6 +201,27 @@ MonoBehaviour:
   fireRate: 10
   gunBarrel: {fileID: 2341743390281965956}
   bulletPool: {fileID: 6200025454162463576}
+--- !u!114 &5395334093478822756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341743389027564838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb20177432b43d469fa403f0f66c663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  maxAttackStamina: 10
+  maxGunStamina: 10
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2341743389676808834
 GameObject:
   m_ObjectHideFlags: 0

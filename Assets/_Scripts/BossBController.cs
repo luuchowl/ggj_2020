@@ -9,9 +9,16 @@ public class BossBController : MonoBehaviour
 	public float nestRadius = 1;
 	public LayerMask teleportObstacles;
 	public Vector2 teleportDelay = Vector2.one;
+	public ObjectPool bulletPool;
 
 	private Enemy enemyController;
 	private Transform player;
+
+	private void Awake()
+	{
+		enemyController = GetComponent<Enemy>();
+		enemyController.deathEvent.AddListener(Die);
+	}
 
 	private void OnEnable()
 	{
@@ -30,9 +37,9 @@ public class BossBController : MonoBehaviour
 		{
 			yield return new WaitForSeconds(Random.Range(teleportDelay.x, teleportDelay.y));
 
-			GetRandomPos();
-
 			transform.position = GetRandomPos();
+			transform.forward = (player.position - transform.position);
+			ShootBullet();
 		}
 	}
 
@@ -58,9 +65,19 @@ public class BossBController : MonoBehaviour
 		return randomPos;
 	}
 
+	public void ShootBullet()
+	{
+		MultiplyingBullet b = bulletPool.GetPooledObject<MultiplyingBullet>();
+		b.currentCloneID = 0;
+		b.bulletPool = bulletPool;
+		b.transform.position = transform.position;
+		b.transform.forward = player.position - transform.position;
+	}
+
 	public void Die()
 	{
 		StopAllCoroutines();
+		bulletPool.ReturnAllObjectsToPool();
 		gameObject.SetActive(false);
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerInputController : MonoBehaviour
@@ -57,11 +58,6 @@ public class PlayerInputController : MonoBehaviour
 			bullet.position = gunBarrel.position;
 			bullet.rotation = gunBarrel.rotation;
 		}
-	}
-
-	public void OnDeviceRegained(InputValue value)
-	{
-		Debug.Log(value);
 	}
 
 	public void OnMove(InputValue value)

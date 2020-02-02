@@ -22,7 +22,13 @@ public class Bullet : MonoBehaviour
 			for (int i = 0; i < collisions.Length; i++)
 			{
 				IDamageable hit = collisions[i].GetComponent<IDamageable>();
-				hit.ApplyDamage(hitBox, attackData);
+
+				if(hit != null)
+				{
+					hit.ApplyDamage(hitBox, attackData);
+				}
+
+				break;
 			}
 
 			hitBox.CloseCollision();
