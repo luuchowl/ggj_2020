@@ -16,7 +16,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: Assets\FMOD2
+  sourceBankPath: Assets\FMOD3
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0

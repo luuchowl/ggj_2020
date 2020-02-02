@@ -14,3 +14,163 @@
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E33440A058
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_JumpBass', format=2, channels=2, frequency=48000, lengthbytes=5664, lengthpcm=46197, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.846741.
+[LOG] SoundI::release                          :  (000001E3F5DA96C8)
+[LOG] SoundI::release                          :     Debugged_SFX_JumpBass (000001E35D9A38F8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E334406488
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Swoosh', format=2, channels=2, frequency=48000, lengthbytes=11744, lengthpcm=48017, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.916321.
+[LOG] SoundI::release                          :  (000001E3F5DAA698)
+[LOG] SoundI::release                          :     Debugged_SFX_Swoosh (000001E35D9A4E18)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E334409608
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Swoosh', format=2, channels=2, frequency=48000, lengthbytes=11744, lengthpcm=48017, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.916321.
+[LOG] SoundI::release                          :  (000001E3F5DA8F98)
+[LOG] SoundI::release                          :     Debugged_SFX_Swoosh (000001E35D9A3758)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E334408FD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Jump', format=2, channels=2, frequency=48000, lengthbytes=9056, lengthpcm=30956, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831573.
+[LOG] SoundI::release                          :  (000001E3F5DABD98)
+[LOG] SoundI::release                          :     Debugged_SFX_Jump (000001E35D9A5CB8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E33440D1D8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_JumpBass', format=2, channels=2, frequency=48000, lengthbytes=5664, lengthpcm=46197, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.846741.
+[LOG] SoundI::release                          :  (000001E3F5DA6BA8)
+[LOG] SoundI::release                          :     Debugged_SFX_JumpBass (000001E35D9A3C38)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E3344091E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Jump', format=2, channels=2, frequency=48000, lengthbytes=9056, lengthpcm=30956, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831573.
+[LOG] SoundI::release                          :  (000001E3F5DA7E58)
+[LOG] SoundI::release                          :     Debugged_SFX_Jump (000001E35D9A45F8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E33440BB28
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Swoosh', format=2, channels=2, frequency=48000, lengthbytes=11744, lengthpcm=48017, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.916321.
+[LOG] SoundI::release                          :  (000001E3F5DAB0A8)
+[LOG] SoundI::release                          :     Debugged_SFX_Swoosh (000001E35D9A5CB8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2872992
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19776
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000049886FF13C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9CDFC8630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9CDFC8600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9CDFC8700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9CDFC87C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E33440AAA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Debugged_SFX_Swoosh', format=2, channels=2, frequency=48000, lengthbytes=11744, lengthpcm=48017, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.916321.
+[LOG] SoundI::release                          :  (000001E3F5DAA698)
+[LOG] SoundI::release                          :     Debugged_SFX_Swoosh (000001E35D9A6818)

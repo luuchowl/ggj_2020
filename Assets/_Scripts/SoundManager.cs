@@ -12,9 +12,11 @@ public class SoundManager : Singleton<SoundManager>
     public StudioEventEmitter dying;
     public StudioEventEmitter explosion;
     public StudioEventEmitter jump;
+    public StudioEventEmitter jumpBass;
     public StudioEventEmitter shoot1;
     public StudioEventEmitter shoot2;
     public StudioEventEmitter shoot3;
+    public StudioEventEmitter swoosh;
 
     [Header("Soundtrack")]
     public StudioEventEmitter gameplayMusic;
@@ -80,6 +82,12 @@ public class SoundManager : Singleton<SoundManager>
         jump.Play();
     }
 
+    public void PlayJumpBass()
+    {
+        jumpBass.Play();
+    }
+
+
     public void PlayShoot1()
     {
         shoot1.Play();
@@ -87,6 +95,11 @@ public class SoundManager : Singleton<SoundManager>
     public void PlayShoot2()
     {
         shoot2.Play();
+    }
+
+    public void PlaySwoosh()
+    {
+        swoosh.Play();
     }
 
     public void PlayGameplayMusic()
