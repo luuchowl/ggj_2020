@@ -8,14 +8,20 @@ public class BossAMovement : MonoBehaviour
     public float interpolationFactor = 0.002f;
     public Vector3 startPos;
     public GameObject playerTransform;
+	public BossFloorManager bossFloor;
 
     void Start()
     {
         startPos = transform.position;
         targetPos = startPos;
-        pickRandomBehaviour();
         playerTransform = GameObject.FindGameObjectWithTag("Player");
     }
+
+	public void StartBattle()
+	{
+		bossFloor.PickRandomBehavior();
+		pickRandomBehaviour();
+	}
 
     // Update is called once per frame
     void Update()
