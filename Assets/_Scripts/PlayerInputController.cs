@@ -45,7 +45,7 @@ public class PlayerInputController : MonoBehaviour
 			movement.isWalking = false;
 		}
 
-		if (lookDir.sqrMagnitude == 0)
+		if (lookDir.sqrMagnitude == 0 || !shooting)
 		{
 			movement.Look(moveDir.normalized);
 		}
@@ -61,7 +61,7 @@ public class PlayerInputController : MonoBehaviour
 			bullet.rotation = gunBarrel.rotation;
 		}
 
-        characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity);
+        characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity / movement.walkSpeed);
         characterAnimator.SetBool("Shooting", shooting);
 
 	}
@@ -77,11 +77,14 @@ public class PlayerInputController : MonoBehaviour
 	{
 		if(playerInput.currentControlScheme == "Keyboard&Mouse")
 		{
-			RaycastHit hit;
-
-			if(Physics.Raycast(cam.ScreenPointToRay(value.Get<Vector2>()), out hit))
+			if (shooting)
 			{
-				lookDir = hit.point - transform.position;
+				RaycastHit hit;
+
+				if (Physics.Raycast(cam.ScreenPointToRay(value.Get<Vector2>()), out hit))
+				{
+					lookDir = hit.point - transform.position;
+				}
 			}
 		}
 		else
