@@ -135,6 +135,7 @@ public class BossFloorManager : MonoBehaviour
     public void PickRandomBehavior()
     {
         StopAllCoroutines();
+        SoundManager.instance.PlayJumpBass();
         int random = Random.Range(1, 5);
         switch (random)
         {

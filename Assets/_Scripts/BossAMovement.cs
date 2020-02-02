@@ -43,6 +43,9 @@ public class BossAMovement : MonoBehaviour
             StartCoroutine(CircularPath(Random.Range(-2f, 2f)));
         }
 
+        SoundManager.instance.PlayDying();
+        
+
         
     }
 

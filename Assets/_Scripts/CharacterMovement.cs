@@ -126,6 +126,7 @@ public class CharacterMovement : MonoBehaviour
     {
         gravityMomentum = jumpHeight;
         controller.Move(gravityDirection * -0.1f);
+        SoundManager.instance.PlaySwoosh();
         
     }
 
@@ -134,6 +135,7 @@ public class CharacterMovement : MonoBehaviour
         if (!isOnDodge) { 
             StopAllCoroutines();
             StartCoroutine(DodgeRoutine(movementDirection));
+            SoundManager.instance.PlayJump();
         }
     }
 

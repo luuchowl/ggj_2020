@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
 	{
 		Game_Manager.instance.StartGame();
+        SoundManager.instance.SetMusicMood(1);
 		gameObject.SetActive(false);
 	}
 
