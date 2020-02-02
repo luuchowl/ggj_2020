@@ -13,7 +13,12 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 	public int maxGunStamina = 10;
 	public Animator playerAnim;
 
-	public UnityEvent valuesChanged = new UnityEvent();
+    [Header("Upgrades")]
+    public bool upgradeSword;
+    public bool upgradeShoot;
+    public bool upgradeDodge;
+
+    public UnityEvent valuesChanged = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
 
 	[ReadOnly] public int currentHealth;

@@ -59,6 +59,7 @@ public class PlayerInputController : MonoBehaviour
 			Transform bullet = bulletPool.GetPooledObject<Transform>();
 			bullet.position = gunBarrel.position;
 			bullet.rotation = gunBarrel.rotation;
+            SoundManager.instance.PlayShoot1();
 		}
 
         characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity / movement.walkSpeed);
@@ -106,12 +107,14 @@ public class PlayerInputController : MonoBehaviour
 	{
 		attackAnimator.SetTrigger("Attack");
         characterAnimator.SetTrigger("Attack");
+        SoundManager.instance.PlayAttack();
 	}
 
 	public void OnJump(InputValue value)
 	{
 		movement.Jump();
-	}
+        SoundManager.instance.PlayJump();
+    }
 
 	public void OnRoll(InputValue value)
 	{
