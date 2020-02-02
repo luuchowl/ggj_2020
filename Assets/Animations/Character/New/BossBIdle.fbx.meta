@@ -1,20 +1,11 @@
 fileFormatVersion: 2
-guid: 2f99abe7ca70e3944824c982266329b4
+guid: b125160741afa814ba0481d3883b7fbb
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -343168209265574887
-    second: Esqueleto|Esqueleto|Esqueleto|Armature.002|Armature|ArmatureAction.002|Ar
-  - first:
-      74: 1276119682184095195
-    second: Esqueleto|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.000
-  - first:
-      74: 1537820463595863073
-    second: Esqueleto|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armatu.001
-  - first:
-      74: -153329559438064476
-    second: Esqueleto|Esqueleto|Esqueleto|Armature|Armature|ArmatureAction|Armature|A
+      74: 6462327378858221686
+    second: Armature.001|Standing
   externalObjects: {}
   materials:
     materialImportMode: 1
