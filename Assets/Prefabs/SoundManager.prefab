@@ -341,11 +341,11 @@ MonoBehaviour:
   dying: {fileID: 4786755385782906250}
   explosion: {fileID: 4786755384441195967}
   jump: {fileID: 4786755384742653965}
-  jumpBass: {fileID: 0}
+  jumpBass: {fileID: 1165367071112686327}
   shoot1: {fileID: 3946416506145314961}
   shoot2: {fileID: 4853219846123595566}
   shoot3: {fileID: 664460658071546855}
-  swoosh: {fileID: 0}
+  swoosh: {fileID: 288748204523777553}
   gameplayMusic: {fileID: 4786755384167113189}
 --- !u!1 &4786755384167113191
 GameObject:
