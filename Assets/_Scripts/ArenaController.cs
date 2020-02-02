@@ -27,17 +27,19 @@ public class ArenaController : MonoBehaviour
 	{
 		if(other.tag == playerTag)
 		{
+			Debug.Log("aaaaa");
 			ChangeDoorState(true);
 		}
 	}
 
 	public void ChangeDoorState(bool closed)
 	{
+		Debug.Log(closed);
 		if(closed == currentStatus)
 		{
 			return;
 		}
-
+		Debug.Log(2);
 		doorAnim.SetBool("Closed", closed);
 		doorChanged.Invoke(closed);
 

@@ -10021,6 +10021,9 @@ MonoBehaviour:
   movement: {fileID: 2341743389027564836}
   fireRate: 10
   gunBarrel: {fileID: 2341743390281965956}
+  pointerMask:
+    serializedVersion: 2
+    m_Bits: 256
   attackAnimator: {fileID: 3931546987326024388}
   characterAnimator: {fileID: 1116305244}
 --- !u!114 &5395334093478822756

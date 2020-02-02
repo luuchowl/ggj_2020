@@ -14,6 +14,7 @@ public class PlayerInputController : MonoBehaviour
 	[Header("Attack")]
 	public float fireRate;
 	public Transform gunBarrel;
+	public LayerMask pointerMask;
     [Header("Animations")]
     public Animator attackAnimator;
     public Animator characterAnimator;
@@ -81,7 +82,7 @@ public class PlayerInputController : MonoBehaviour
 			{
 				RaycastHit hit;
 
-				if (Physics.Raycast(cam.ScreenPointToRay(value.Get<Vector2>()), out hit))
+				if (Physics.Raycast(cam.ScreenPointToRay(value.Get<Vector2>()), out hit, Mathf.Infinity, pointerMask))
 				{
 					lookDir = hit.point - transform.position;
 				}
