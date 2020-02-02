@@ -9,7 +9,7 @@ public class BossBController : MonoBehaviour
 	public float nestRadius = 1;
 	public LayerMask teleportObstacles;
 	public Vector2 teleportDelay = Vector2.one;
-	public ObjectPool bulletPool;
+	public Animator bossAnim;
 
 	private Enemy enemyController;
 	private Transform player;
@@ -18,6 +18,7 @@ public class BossBController : MonoBehaviour
 	{
 		enemyController = GetComponent<Enemy>();
 		enemyController.deathEvent.AddListener(Die);
+		enemyController.damageEvent.AddListener(PlayDamageAnim);
 	}
 
 	private void OnEnable()
@@ -36,7 +37,12 @@ public class BossBController : MonoBehaviour
 		{
 			yield return new WaitForSeconds(Random.Range(teleportDelay.x, teleportDelay.y));
 
+			bossAnim.SetTrigger("TeleportOut");
+			yield return new WaitForSeconds(1);
+
 			transform.position = GetRandomPos();
+
+			bossAnim.SetTrigger("TeleportIn");
 			transform.forward = (player.position - transform.position);
 			ShootBullet();
 		}
@@ -66,9 +72,9 @@ public class BossBController : MonoBehaviour
 
 	public void ShootBullet()
 	{
-		MultiplyingBullet b = bulletPool.GetPooledObject<MultiplyingBullet>();
+		MultiplyingBullet b = Game_Manager.instance.enemyBulletPool.GetPooledObject<MultiplyingBullet>();
 		b.currentCloneID = 0;
-		b.bulletPool = bulletPool;
+		b.bulletPool = Game_Manager.instance.enemyBulletPool;
 		b.transform.position = transform.position;
 		b.transform.forward = player.position - transform.position;
 	}
@@ -76,8 +82,13 @@ public class BossBController : MonoBehaviour
 	public void Die()
 	{
 		StopAllCoroutines();
-		bulletPool.ReturnAllObjectsToPool();
+		Game_Manager.instance.enemyBulletPool.ReturnAllObjectsToPool();
 		gameObject.SetActive(false);
+	}
+
+	private void PlayDamageAnim()
+	{
+		bossAnim.SetTrigger("Damaged");
 	}
 
 	private void OnDrawGizmosSelected()
