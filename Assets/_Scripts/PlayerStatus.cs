@@ -7,9 +7,11 @@ using NaughtyAttributes;
 
 public class PlayerStatus : MonoBehaviour, IDamageable
 {
+	public float invincibilityDuration = 1;
 	public int maxHealth = 10;
 	public int maxAttackStamina = 10;
 	public int maxGunStamina = 10;
+	public Animator playerAnim;
 
 	public UnityEvent valuesChanged = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
@@ -18,6 +20,8 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 	[ReadOnly] public int currentAttackStamina;
 	[ReadOnly] public int currentGunStamina;
 
+	private bool invincible;
+
 	private void OnEnable()
 	{
 		ResetStatus();
@@ -25,6 +29,11 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 
 	public void ApplyDamage(Hitbox hitbox, AttackData attackData)
 	{
+		if (invincible)
+		{
+			return;
+		}
+
 		currentHealth -= attackData.damage;
 		valuesChanged.Invoke();
 
@@ -33,6 +42,23 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 			Debug.Log("Player Dead");
 			deathEvent.Invoke();
 		}
+		else
+		{
+			StartCoroutine(Invencibility_Routine());
+		}
+	}
+
+	private IEnumerator Invencibility_Routine()
+	{
+		SetInvincibility(true);
+		yield return new WaitForSeconds(invincibilityDuration);
+		SetInvincibility(false);
+	}
+
+	private void SetInvincibility(bool _invincible)
+	{
+		invincible = _invincible;
+		playerAnim.SetBool("Damaged", invincible);
 	}
 
 	public void ResetStatus()

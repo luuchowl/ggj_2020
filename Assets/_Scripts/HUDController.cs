@@ -54,26 +54,19 @@ public class HUDController : MonoBehaviour
 
 	public void ShowPlayerStatus()
 	{
-		HideAll();
-		UpdateUI();
-		StopAllCoroutines();
-		StartCoroutine(ShowPlayerStatus_Routine());
-	}
-
-	private IEnumerator ShowPlayerStatus_Routine()
-	{
-		hudAnim.SetTrigger("ShowPlayerStatus");
-
 		playerHealthHolder.SetActive(true);
 		timerHolder.SetActive(true);
 		skillsHolder.SetActive(true);
 
-		yield return null;
+		UpdateUI();
+		hudAnim.SetTrigger("ShowPlayerStatus");
 	}
 
 	public void ShowBossHealth()
 	{
 		bossHealthHolder.SetActive(true);
+		UpdateUI();
+		hudAnim.SetTrigger("ShowBossHealth");
 	}
 
 	public void SetCurrentBoss(Enemy boss)
@@ -86,7 +79,7 @@ public class HUDController : MonoBehaviour
 		currentBoss = boss;
 		currentBoss.damageEvent.AddListener(UpdateUI);
 
-		hudAnim.SetTrigger("ShowBossHeath");
+		hudAnim.SetTrigger("ShowBossHealth");
 		UpdateUI();
 	}
 }
