@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3567394190428250481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.71, y: 2.9455771, z: 12.17}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3567394192409770578}
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 50, y: 50, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3567394190428250484
 MonoBehaviour:
@@ -161,22 +161,27 @@ PrefabInstance:
     - target: {fileID: 3285786080739142978, guid: 4c57af1e4008c474a8245ca7469d4489,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3285786080739142978, guid: 4c57af1e4008c474a8245ca7469d4489,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3285786080739142978, guid: 4c57af1e4008c474a8245ca7469d4489,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3285786080739142990, guid: 4c57af1e4008c474a8245ca7469d4489,
         type: 3}
       propertyPath: m_Name
       value: DoorPivot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285786080779178457, guid: 4c57af1e4008c474a8245ca7469d4489,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c57af1e4008c474a8245ca7469d4489, type: 3}
