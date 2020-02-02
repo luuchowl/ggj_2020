@@ -7,18 +7,21 @@ public class BossAMovement : MonoBehaviour
     public Vector3 targetPos;
     public float interpolationFactor = 0.002f;
     public Vector3 startPos;
+    public GameObject playerTransform;
 
     void Start()
     {
         startPos = transform.position;
         targetPos = startPos;
         pickRandomBehaviour();
+        playerTransform = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPos, interpolationFactor);
+        transform.forward = (playerTransform.transform.position - transform.position).normalized;
     }
 
     void pickRandomBehaviour()
@@ -33,6 +36,8 @@ public class BossAMovement : MonoBehaviour
         {
             StartCoroutine(CircularPath(Random.Range(-2f, 2f)));
         }
+
+        
     }
 
     IEnumerator CircularPath(float speed)

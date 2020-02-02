@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatToHit:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 2560
   shape: 0
   boxSize: {x: 1, y: 1, z: 1}
   sphereRadius: 0.5

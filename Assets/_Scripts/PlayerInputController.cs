@@ -12,12 +12,14 @@ public class PlayerInputController : MonoBehaviour
 	public CharacterController controller;
 	public CharacterMovement movement;
 	[Header("Attack")]
-	public Animator attackAnimator;
 	public float fireRate;
 	public Transform gunBarrel;
 	public ObjectPool bulletPool;
-	
-	private Camera cam;
+    [Header("Animations")]
+    public Animator attackAnimator;
+    public Animator characterAnimator;
+
+    private Camera cam;
 	private Vector3 moveDir;
 	private Vector3 lookDir;
 	private float reloadTime;
@@ -58,6 +60,10 @@ public class PlayerInputController : MonoBehaviour
 			bullet.position = gunBarrel.position;
 			bullet.rotation = gunBarrel.rotation;
 		}
+
+        characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity);
+        characterAnimator.SetBool("Shooting", shooting);
+
 	}
 
 	public void OnMove(InputValue value)
@@ -96,6 +102,7 @@ public class PlayerInputController : MonoBehaviour
 	public void OnAttack(InputValue value)
 	{
 		attackAnimator.SetTrigger("Attack");
+        characterAnimator.SetTrigger("Attack");
 	}
 
 	public void OnJump(InputValue value)

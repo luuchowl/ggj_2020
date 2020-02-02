@@ -18,6 +18,11 @@ public class ArenaController : MonoBehaviour
 
 	private bool currentStatus;
 
+	private void Awake()
+	{
+		Game_Manager.instance.gameStartEvent.AddListener(() => ChangeDoorState(false));
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == playerTag)

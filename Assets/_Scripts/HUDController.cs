@@ -24,6 +24,7 @@ public class HUDController : MonoBehaviour
 	{
 		player = FindObjectOfType<PlayerStatus>();
 		player.valuesChanged.AddListener(UpdateUI);
+		Game_Manager.instance.gameStartEvent.AddListener(ShowPlayerStatus);
 	}
 
 	public void UpdateUI()

@@ -26,14 +26,12 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 	public void ApplyDamage(Hitbox hitbox, AttackData attackData)
 	{
 		currentHealth -= attackData.damage;
+		valuesChanged.Invoke();
 
 		if(currentHealth <= 0)
 		{
+			Debug.Log("Player Dead");
 			deathEvent.Invoke();
-		}
-		else
-		{
-			valuesChanged.Invoke();
 		}
 	}
 
