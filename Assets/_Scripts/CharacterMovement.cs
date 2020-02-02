@@ -156,7 +156,6 @@ public class CharacterMovement : MonoBehaviour
         }
     
 
-    print(Timer.instance.GetNormalizedTime());
         if (Timer.instance.GetNormalizedTime() < 0.85f || Random.Range(0, 4) == 0 || status.upgradeDodge)
         {
             print(Timer.instance.GetNormalizedTime());
