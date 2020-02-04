@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour, IDamageable
 		{
 			deathEvent.Invoke();
 			upgradeMenu.gameObject.SetActive(true);
+			SoundManager.instance.PlayExplosion();
 		}
 		else
 		{

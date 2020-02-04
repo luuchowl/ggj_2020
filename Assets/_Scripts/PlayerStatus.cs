@@ -40,6 +40,8 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 		}
 
 		currentHealth -= attackData.damage;
+		SoundManager.instance.PlayDamage();
+
 		valuesChanged.Invoke();
 
 		if(currentHealth <= 0)

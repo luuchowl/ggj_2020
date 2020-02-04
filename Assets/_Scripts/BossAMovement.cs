@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossAMovement : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class BossAMovement : MonoBehaviour
     public GameObject playerTransform;
 	public BossFloorManager bossFloor;
 	public Enemy enemyController;
+	public UnityEvent battleStartEvent = new UnityEvent();
 
-    void Start()
+	void Start()
     {
         startPos = transform.position;
         targetPos = startPos;
@@ -21,6 +23,7 @@ public class BossAMovement : MonoBehaviour
 
 	public void StartBattle()
 	{
+		battleStartEvent.Invoke();
 		bossFloor.PickRandomBehavior();
 		pickRandomBehaviour();
 		SoundManager.instance.SetMusicMood(2);
@@ -77,9 +80,11 @@ public class BossAMovement : MonoBehaviour
 
 	public void Die()
 	{
-		SoundManager.instance.SetMusicMood(1); Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
+		SoundManager.instance.SetMusicMood(1);
+		Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
 		fx.position = transform.position;
 		StopAllCoroutines();
+		bossFloor.StopAllCoroutines();
 		gameObject.SetActive(false);
 	}
 }
