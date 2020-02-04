@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9086168827390363869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD3/Master.bank
+  SubDir: 
+  lastModified: 637162542405192542
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6804865021191443990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +33,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 8194704b4289ae4c94f3cd5926e6a1cf
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +56,7 @@ MonoBehaviour:
   Path: event:/Jump
   guid: 2a2458cacfa2b64ba3a240bde0974879
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -60,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD3/Master.strings.bank
   SubDir: 
-  lastModified: 637162506033812092
+  lastModified: 637162542405212121
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -81,15 +99,32 @@ MonoBehaviour:
   Path: event:/GameplayMusic
   guid: cbd848b06b9b7242a4274ca545caf7b4
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4233402977269874036}
+  - {fileID: -4766832616653241811}
   MinDistance: 0
   MaxDistance: 0
   Length: 55928
+--- !u!114 &-4766832616653241811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameplayMusic/Mood
+  m_EditorClassIdentifier: 
+  Name: Mood
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
 --- !u!114 &-4233402977269874036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +157,7 @@ MonoBehaviour:
   Path: event:/Attack
   guid: 3f028358e56bbc4b8425a27493d6d536
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -145,7 +180,7 @@ MonoBehaviour:
   Path: event:/Shoot 3
   guid: 9787210b71a1a34ea72a995a6b583eee
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -168,7 +203,7 @@ MonoBehaviour:
   Path: event:/Dying
   guid: 72fb909fdb572e49b1e79d598fbbc038
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -190,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5486624924710034992}
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   EditorEvents:
   - {fileID: -6323623584870310666}
   - {fileID: -4222088909799831086}
@@ -207,10 +242,10 @@ MonoBehaviour:
   - {fileID: 5594358817542366778}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   StringsBanks:
   - {fileID: -5486624924710034992}
-  stringsBankWriteTime: 637162506033812092
+  stringsBankWriteTime: 637162542405212121
   cacheVersion: 3
 --- !u!114 &1157805283646362754
 MonoBehaviour:
@@ -227,7 +262,7 @@ MonoBehaviour:
   Path: event:/Shoot 1
   guid: 7435d3ae2c1b3149810ff2b094aca5be
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -250,7 +285,7 @@ MonoBehaviour:
   Path: event:/JumpBass
   guid: 9790d3bd2ed7cc498230c060b3af2fd0
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -273,7 +308,7 @@ MonoBehaviour:
   Path: event:/Swoosh
   guid: 5bc407892014944db008a1c9ad8d4d7e
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -296,7 +331,7 @@ MonoBehaviour:
   Path: event:/Shoot 2
   guid: f4b0a12dc2b15d4b902e354b0dcab394
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -319,7 +354,7 @@ MonoBehaviour:
   Path: event:/Damage
   guid: ef3bc542ec1df94fbcb34d30559101cc
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -360,7 +395,7 @@ MonoBehaviour:
   Path: event:/Dash 2
   guid: 9a981f82a590bc468de629fe02b03e51
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -383,7 +418,7 @@ MonoBehaviour:
   Path: event:/Dash 1
   guid: 4ab0d8a98d11cb46a2710c777f0aa356
   Banks:
-  - {fileID: 7439141584694969836}
+  - {fileID: -9086168827390363869}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

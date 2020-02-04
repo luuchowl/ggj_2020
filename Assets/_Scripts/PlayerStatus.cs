@@ -50,6 +50,11 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 		else
 		{
 			StartCoroutine(Invencibility_Routine());
+
+			if(currentHealth < (maxHealth * 0.2f))
+			{
+				SoundManager.instance.SetMusicMood(3);
+			}
 		}
 	}
 

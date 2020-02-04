@@ -9,18 +9,21 @@ public class BossAMovement : MonoBehaviour
     public Vector3 startPos;
     public GameObject playerTransform;
 	public BossFloorManager bossFloor;
+	public Enemy enemyController;
 
     void Start()
     {
         startPos = transform.position;
         targetPos = startPos;
         playerTransform = GameObject.FindGameObjectWithTag("Player");
-    }
+		enemyController.deathEvent.AddListener(Die);
+	}
 
 	public void StartBattle()
 	{
 		bossFloor.PickRandomBehavior();
 		pickRandomBehaviour();
+		SoundManager.instance.SetMusicMood(2);
 	}
 
     // Update is called once per frame
@@ -72,5 +75,11 @@ public class BossAMovement : MonoBehaviour
         pickRandomBehaviour();
     }
 
-    
+	public void Die()
+	{
+		SoundManager.instance.SetMusicMood(1); Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
+		fx.position = transform.position;
+		StopAllCoroutines();
+		gameObject.SetActive(false);
+	}
 }

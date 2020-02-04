@@ -29,6 +29,7 @@ public class BossBController : MonoBehaviour
 	public void StartBattle()
 	{
 		StartCoroutine(Battle_Routine());
+		SoundManager.instance.SetMusicMood(2);
 	}
 
 	private IEnumerator Battle_Routine()
@@ -83,6 +84,9 @@ public class BossBController : MonoBehaviour
 	{
 		StopAllCoroutines();
 		Game_Manager.instance.enemyBulletPool.ReturnAllObjectsToPool();
+		SoundManager.instance.SetMusicMood(1);
+		Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
+		fx.position = transform.position;
 		gameObject.SetActive(false);
 	}
 

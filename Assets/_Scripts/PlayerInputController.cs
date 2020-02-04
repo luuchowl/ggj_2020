@@ -64,7 +64,6 @@ public class PlayerInputController : MonoBehaviour
 
         characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity / movement.walkSpeed);
         characterAnimator.SetBool("Shooting", shooting);
-
 	}
 
 	public void OnMove(InputValue value)

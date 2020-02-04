@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IDamageable
 	public int maxHealth;
 	public Hitbox contactHitbox;
 	public AttackData contactDamageData;
+	public GameObject upgradeMenu;
 	public UnityEvent damageEvent = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
 
@@ -42,6 +43,7 @@ public class Enemy : MonoBehaviour, IDamageable
 		if(currentHealth <= 0)
 		{
 			deathEvent.Invoke();
+			upgradeMenu.gameObject.SetActive(true);
 		}
 		else
 		{
