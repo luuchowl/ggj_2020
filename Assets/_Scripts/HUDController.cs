@@ -27,6 +27,11 @@ public class HUDController : MonoBehaviour
 		Game_Manager.instance.gameStartEvent.AddListener(ShowPlayerStatus);
 	}
 
+	private void Update()
+	{
+		timerText.text = $"> TIME = {Timer.instance.totalTime - (Timer.instance.totalTime * Timer.instance.GetNormalizedTime()):0}";
+	}
+
 	public void UpdateUI()
 	{
 		playerHealthBar.fillAmount = (float)player.currentHealth / player.maxHealth;

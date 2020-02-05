@@ -15,7 +15,11 @@ public class PlayerInputController : MonoBehaviour
 	public float fireRate;
 	public Transform gunBarrel;
 	public LayerMask pointerMask;
-    [Header("Animations")]
+	public PlayerStatus playerStatus;
+	public Transform swordPosition;
+	public Vector3 swordVariance;
+	public float shootAngleVariance;
+	[Header("Animations")]
     public Animator attackAnimator;
     public Animator characterAnimator;
 
@@ -24,10 +28,12 @@ public class PlayerInputController : MonoBehaviour
 	private Vector3 lookDir;
 	private float reloadTime;
 	private bool shooting;
-
+	private Vector3 swordStartPos;
+	
 	private void Awake()
 	{
 		cam = Camera.main;
+		swordStartPos = swordPosition.localPosition;
 	}
 
 	// Update is called once per frame
@@ -59,12 +65,17 @@ public class PlayerInputController : MonoBehaviour
 			Transform bullet = Game_Manager.instance.playerBulletPool.GetPooledObject<Transform>();
 			bullet.position = gunBarrel.position;
 			bullet.rotation = gunBarrel.rotation;
+
+			if (!playerStatus.upgradeShoot)
+			{
+				bullet.Rotate(Vector3.up, Random.Range(-shootAngleVariance, shootAngleVariance) * Timer.instance.GetNormalizedTime());
+			}
+
             SoundManager.instance.PlayShoot1();
 		}
 
         characterAnimator.SetFloat("WalkSpeed", movement.currentWalkVelocity / movement.walkSpeed);
         characterAnimator.SetBool("Shooting", shooting);
-
 	}
 
 	public void OnMove(InputValue value)
@@ -108,6 +119,20 @@ public class PlayerInputController : MonoBehaviour
 		attackAnimator.SetTrigger("Attack");
         characterAnimator.SetTrigger("Attack");
         SoundManager.instance.PlayAttack();
+
+		if (playerStatus.upgradeSword)
+		{
+			swordPosition.localPosition = swordStartPos;
+		}
+		else
+		{
+			Vector3 randomPos = new Vector3();
+			randomPos.x = Random.Range(-swordVariance.x, swordVariance.x) * Timer.instance.GetNormalizedTime();
+			randomPos.y = Random.Range(-swordVariance.y, swordVariance.y) * Timer.instance.GetNormalizedTime();
+			randomPos.z = Random.Range(0, swordVariance.z) * Timer.instance.GetNormalizedTime();
+
+			swordPosition.localPosition = randomPos;
+		}
 	}
 
 	public void OnJump(InputValue value)

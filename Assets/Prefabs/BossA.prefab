@@ -151,6 +151,8 @@ MonoBehaviour:
   interpolationFactor: 0.02
   startPos: {x: 0, y: 0, z: 0}
   playerTransform: {fileID: 0}
+  bossFloor: {fileID: 0}
+  enemyController: {fileID: 6836063103446904200}
 --- !u!1001 &6836063103549190826
 PrefabInstance:
   m_ObjectHideFlags: 0

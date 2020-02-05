@@ -10,11 +10,6 @@ public class Timer : Singleton<Timer>
     private float currentTimer = 0;
     public bool complete = false;
     
-    void Start()
-    {
-        StartTimer();
-    }
-    
     void Update()
     {
         currentTimer += Time.deltaTime;
