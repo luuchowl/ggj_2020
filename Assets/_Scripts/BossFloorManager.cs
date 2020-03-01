@@ -238,7 +238,7 @@ public class BossFloorManager : MonoBehaviour
 
     IEnumerator AttackRoutineD()
     {
-        print("d");
+        //print("d");
         float timer = 0;
 
         float seed = Random.Range(0f, 10f);
