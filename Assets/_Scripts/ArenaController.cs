@@ -25,9 +25,9 @@ public class ArenaController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if(other.tag == playerTag)
+		if(other.tag == playerTag && !currentStatus)
 		{
-			ChangeDoorState(true);
+			doorChanged.Invoke(true);
 		}
 	}
 
@@ -39,7 +39,6 @@ public class ArenaController : MonoBehaviour
 		}
 
 		doorAnim.SetBool("Closed", closed);
-		doorChanged.Invoke(closed);
 
 		currentStatus = closed;
 	}

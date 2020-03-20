@@ -40,6 +40,8 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 		}
 
 		currentHealth -= attackData.damage;
+		SoundManager.instance.PlayDamage();
+
 		valuesChanged.Invoke();
 
 		if(currentHealth <= 0)
@@ -50,6 +52,11 @@ public class PlayerStatus : MonoBehaviour, IDamageable
 		else
 		{
 			StartCoroutine(Invencibility_Routine());
+
+			if(currentHealth < (maxHealth * 0.2f))
+			{
+				SoundManager.instance.SetMusicMood(3);
+			}
 		}
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Enemy))]
 public class BossBController : MonoBehaviour
@@ -10,6 +11,7 @@ public class BossBController : MonoBehaviour
 	public LayerMask teleportObstacles;
 	public Vector2 teleportDelay = Vector2.one;
 	public Animator bossAnim;
+	public UnityEvent battleStartEvent = new UnityEvent();
 
 	private Enemy enemyController;
 	private Transform player;
@@ -28,7 +30,14 @@ public class BossBController : MonoBehaviour
 
 	public void StartBattle()
 	{
+		if (!gameObject.activeInHierarchy)
+		{
+			return;
+		}
+
+		battleStartEvent.Invoke();
 		StartCoroutine(Battle_Routine());
+		SoundManager.instance.SetMusicMood(2);
 	}
 
 	private IEnumerator Battle_Routine()
@@ -38,12 +47,15 @@ public class BossBController : MonoBehaviour
 			yield return new WaitForSeconds(Random.Range(teleportDelay.x, teleportDelay.y));
 
 			bossAnim.SetTrigger("TeleportOut");
+			SoundManager.instance.PlayJumpBass();
 			yield return new WaitForSeconds(1);
 
 			transform.position = GetRandomPos();
 
 			bossAnim.SetTrigger("TeleportIn");
+			SoundManager.instance.PlayJumpBass();
 			transform.forward = (player.position - transform.position);
+			yield return new WaitForSeconds(0.5f);
 			ShootBullet();
 		}
 	}
@@ -77,12 +89,16 @@ public class BossBController : MonoBehaviour
 		b.bulletPool = Game_Manager.instance.enemyBulletPool;
 		b.transform.position = transform.position;
 		b.transform.forward = player.position - transform.position;
+		SoundManager.instance.PlayShoot2();
 	}
 
 	public void Die()
 	{
 		StopAllCoroutines();
 		Game_Manager.instance.enemyBulletPool.ReturnAllObjectsToPool();
+		SoundManager.instance.SetMusicMood(1);
+		Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
+		fx.position = transform.position;
 		gameObject.SetActive(false);
 	}
 
