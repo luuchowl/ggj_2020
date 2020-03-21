@@ -12,9 +12,15 @@ public class GameOverController : MonoBehaviour
 	private void Awake()
 	{
 		player.loopPointReached += Player_loopPointReached;
-	}
+        
+    }
 
-	private void Player_loopPointReached(VideoPlayer source)
+    private void Start()
+    {
+        SoundManager.instance.SetMusicMood(4);
+    }
+
+    private void Player_loopPointReached(VideoPlayer source)
 	{
 		if(source.clip == gameOver)
 		{

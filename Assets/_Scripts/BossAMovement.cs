@@ -80,7 +80,7 @@ public class BossAMovement : MonoBehaviour
 
 	public void Die()
 	{
-		SoundManager.instance.SetMusicMood(1);
+		SoundManager.instance.SetMusicMood(2);
 		Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
 		fx.position = transform.position;
 		StopAllCoroutines();

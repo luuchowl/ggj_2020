@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+
+
 public class SoundManager : Singleton<SoundManager>
 {
     [Header("SFX")]
@@ -24,6 +26,9 @@ public class SoundManager : Singleton<SoundManager>
     private void Start()
     {
         PlayGameplayMusic();
+        DontDestroyOnLoad(this.gameObject);
+
+        
     }
 
     private void Update()
