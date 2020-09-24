@@ -24,7 +24,7 @@ public class CameraEffectsManager : MonoBehaviour
 
     IEnumerator GlitchOverTimeRoutine()
     {
-        print("coroutine");
+        //print("coroutine");
         currentDigitalGlitch = digitalGlitchBegin;
         while (!Timer.instance.complete)
         {

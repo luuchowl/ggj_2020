@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
@@ -28,6 +30,21 @@ public class MenuController : MonoBehaviour
 			menuAnim.SetTrigger("Glitch");
 
 			yield return new WaitForSeconds(Random.Range(glitchInterval.x, glitchInterval.y));
+		}
+	}
+
+	private void Update()
+	{
+		if(!Game_Manager.instance.gameStarted)
+		{
+			if (Keyboard.current.anyKey.wasPressedThisFrame ||
+				Mouse.current.leftButton.wasPressedThisFrame ||
+				Mouse.current.rightButton.wasPressedThisFrame ||
+				Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic))
+			{
+				StartGame();
+
+			}
 		}
 	}
 

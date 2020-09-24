@@ -289,4 +289,31 @@ public class BossFloorManager : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         PickRandomBehavior();
     }
+
+    public void ResetPositions()
+	{
+        StopAllCoroutines();
+        StartCoroutine(ResetPositionsRoutine());
+	}
+
+    private IEnumerator ResetPositionsRoutine()
+	{
+        float duration = 1f;
+        float t = 0;
+
+		while (t < duration)
+		{
+            t += Time.deltaTime;
+
+			foreach (Transform child in transform)
+			{
+
+                Vector3 targetPos = child.localPosition;
+                targetPos.y = 0;
+                child.localPosition = Vector3.Lerp(child.localPosition, targetPos, t / duration);
+			}
+
+            yield return null;
+		}
+    }
 }

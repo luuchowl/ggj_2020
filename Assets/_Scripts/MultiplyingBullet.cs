@@ -50,8 +50,6 @@ public class MultiplyingBullet : MonoBehaviour
 						b2.transform.position += b2.transform.forward * 1;
 					}
 				}
-
-				break;
 			}
 
 			hitBox.CloseCollision();

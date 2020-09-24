@@ -31,9 +31,9 @@ public class Bullet : MonoBehaviour
 				if(hit != null)
 				{
 					hit.ApplyDamage(hitBox, attackData);
+					//break;
 				}
 
-				break;
 			}
 
 			hitBox.CloseCollision();

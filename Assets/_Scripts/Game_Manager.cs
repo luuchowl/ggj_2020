@@ -16,8 +16,11 @@ public class Game_Manager : Singleton<Game_Manager>
 	public ObjectPool bulletDeathPool;
 	public ObjectPool explosionPool;
 
+	public bool gameStarted { get; private set; }
+
 	public UnityEvent gameStartEvent = new UnityEvent();
 	public UnityEvent gameOverEvent = new UnityEvent();
+
 
 	private void Awake()
 	{
@@ -47,12 +50,14 @@ public class Game_Manager : Singleton<Game_Manager>
 		playerInput?.playerInput.ActivateInput();
 		gameStartEvent.Invoke();
 		Timer.instance.StartTimer();
+		gameStarted = true;
 	}
 
 	public void GameOver()
 	{
 		playerInput?.playerInput.DeactivateInput();
 		gameOverEvent.Invoke();
+		gameStarted = false;
 
 		SceneManager.LoadScene("GameOver");
 	}

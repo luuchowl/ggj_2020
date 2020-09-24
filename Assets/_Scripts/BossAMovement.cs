@@ -84,7 +84,7 @@ public class BossAMovement : MonoBehaviour
 		Transform fx = Game_Manager.instance.explosionPool.GetPooledObject().transform;
 		fx.position = transform.position;
 		StopAllCoroutines();
-		bossFloor.StopAllCoroutines();
+		bossFloor.ResetPositions();
 		gameObject.SetActive(false);
 	}
 }
