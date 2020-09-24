@@ -9,6 +9,7 @@ public class UpgradeMenu : MonoBehaviour
     public Button buttonDash;
     public Button buttonSword;
     public Button buttonShoot;
+    public float ignoreInputTime = 1;
 
     public Animator parentAnimator;
     public GameObject fader;
@@ -20,23 +21,33 @@ public class UpgradeMenu : MonoBehaviour
 
     public void OnEnable()
     {
+        buttonShoot.interactable = buttonDash.interactable = buttonSword.interactable = false;
+        fader.SetActive(false);
+
+        StopAllCoroutines();
+        StartCoroutine(IgnoreInputForTime_Routine());
+    }
+
+    private IEnumerator IgnoreInputForTime_Routine()
+	{
+        yield return new WaitForSeconds(ignoreInputTime);
+
         buttonShoot.interactable = !status.upgradeShoot;
         buttonDash.interactable = !status.upgradeDodge;
         buttonSword.interactable = !status.upgradeSword;
-        fader.SetActive(false);
 
-		if (buttonShoot.interactable)
-		{
+        if (buttonShoot.interactable)
+        {
             buttonShoot.Select();
-		}
+        }
         else if (buttonDash.interactable)
-		{
+        {
             buttonDash.Select();
-		}
-		else
-		{
+        }
+        else
+        {
             buttonSword.Select();
-		}
+        }
     }
 
     public void UpgradeShoot()
