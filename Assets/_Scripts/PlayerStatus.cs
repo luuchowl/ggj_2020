@@ -18,7 +18,7 @@ public class PlayerStatus : MonoBehaviour, IDamageable
     public bool upgradeShoot;
     public bool upgradeDodge;
 
-    public UnityEvent valuesChanged = new UnityEvent();
+	public UnityEvent valuesChanged = new UnityEvent();
 	public UnityEvent deathEvent = new UnityEvent();
 
 	[ReadOnly] public int currentHealth;

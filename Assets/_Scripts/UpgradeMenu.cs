@@ -20,10 +20,23 @@ public class UpgradeMenu : MonoBehaviour
 
     public void OnEnable()
     {
+        buttonShoot.interactable = !status.upgradeShoot;
         buttonDash.interactable = !status.upgradeDodge;
         buttonSword.interactable = !status.upgradeSword;
-        buttonShoot.interactable = !status.upgradeShoot;
         fader.SetActive(false);
+
+		if (buttonShoot.interactable)
+		{
+            buttonShoot.Select();
+		}
+        else if (buttonDash.interactable)
+		{
+            buttonDash.Select();
+		}
+		else
+		{
+            buttonSword.Select();
+		}
     }
 
     public void UpgradeShoot()

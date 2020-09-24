@@ -124,10 +124,9 @@ public class CharacterMovement : MonoBehaviour
 
     public void Jump()
     {
-        gravityMomentum = jumpHeight;
-        controller.Move(gravityDirection * -0.1f);
+		gravityMomentum = jumpHeight;
+		controller.Move(gravityDirection * -0.1f);
         SoundManager.instance.PlaySwoosh();
-        
     }
 
     public void Dodge(Vector3 direction)
@@ -154,7 +153,7 @@ public class CharacterMovement : MonoBehaviour
         float randomDistance = 0;
 
         if (!status.upgradeDodge) { 
-        randomDistance = dodgeSpeed + Random.Range(-Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()), Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()));
+            randomDistance = dodgeSpeed + Random.Range(-Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()), Mathf.Lerp(dodgeRandomStart, dodgeRandomEnd, Timer.instance.GetNormalizedTime()));
         }
     
 
