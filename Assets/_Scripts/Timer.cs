@@ -26,6 +26,7 @@ public class Timer : Singleton<Timer>
     public void StartTimer()
     {
         currentTimer = 0;
+        complete = false;
     }
 
     public float GetNormalizedTime()

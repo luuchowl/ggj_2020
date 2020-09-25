@@ -29,6 +29,11 @@ public class HUDController : MonoBehaviour
 
 	private void Update()
 	{
+		if (Timer.instance == null)
+		{
+			Debug.Log("Time is null");
+		}
+
 		timerText.text = $"> TIME = {Timer.instance.totalTime - (Timer.instance.totalTime * Timer.instance.GetNormalizedTime()):0}";
 	}
 

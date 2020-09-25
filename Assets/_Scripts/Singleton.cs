@@ -51,6 +51,11 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+	private void Awake()
+	{
+        DontDestroyOnLoad(this.gameObject);
+	}
+
 	private void OnApplicationQuit()
     {
         m_ShuttingDown = true;

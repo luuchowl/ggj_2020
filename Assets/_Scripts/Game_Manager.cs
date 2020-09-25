@@ -31,7 +31,8 @@ public class Game_Manager : Singleton<Game_Manager>
 
 	private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
 		if(player != null)
 		{
 
