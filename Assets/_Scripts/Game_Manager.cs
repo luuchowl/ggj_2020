@@ -21,13 +21,11 @@ public class Game_Manager : Singleton<Game_Manager>
 	public UnityEvent gameStartEvent = new UnityEvent();
 	public UnityEvent gameOverEvent = new UnityEvent();
 
-
-	private void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-
-        
-    }
+	}
 
 	private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
 	{

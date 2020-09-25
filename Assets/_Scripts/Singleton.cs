@@ -45,15 +45,22 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                     }
                 }
                 
- 
+
                 return m_Instance;
             }
         }
     }
 
-	private void Awake()
+	protected virtual void Awake()
 	{
-        DontDestroyOnLoad(this.gameObject);
+        if(instance != this)
+		{
+            Destroy(this.gameObject);
+		}
+		else
+		{
+            DontDestroyOnLoad(this.gameObject);
+		}
 	}
 
 	private void OnApplicationQuit()
@@ -64,6 +71,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
  
     private void OnDestroy()
     {
-        m_ShuttingDown = true;
+        //m_ShuttingDown = true;
     }
 }
